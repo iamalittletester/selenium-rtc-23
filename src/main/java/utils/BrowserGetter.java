@@ -1,5 +1,6 @@
 package utils;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,7 +18,7 @@ public class BrowserGetter {
 
     public WebDriver getFirefox() {
         WebDriver driver = new FirefoxDriver();
-        driver.manage().window().maximize();
+        driver.manage().window().setSize(new Dimension(200, 800));
         return driver;
     }
 
